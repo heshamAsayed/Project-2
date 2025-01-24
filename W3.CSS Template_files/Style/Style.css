@@ -1,0 +1,605 @@
+/*=============================
+            Variarable
+================================*/
+:root {
+    --background-height-iamge: 400px;
+    --color-body: #777;
+    --color-hover: #ccc;
+    --before: "  ";
+    --before-avg: "  ";
+}
+
+/*================================
+            the global
+===============================*/
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--color-body);
+    box-sizing: border-box;
+    line-height: 1.8;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+
+/*================================
+                the header
+==================================*/
+
+
+/*====================================
+        start navbar mobiles
+=================================*/
+.navbar2 {
+    display: none;
+    width: 100%;
+    position: fixed;
+    float: left;
+    z-index: 100;
+    top: 0;
+}
+
+.navbar2 a {
+    letter-spacing: 1px;
+}
+
+.navbar2>a {
+    float: left;
+    color: var(--color-body);
+    text-decoration: none;
+    margin: 8px;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.navbar2>a:hover {
+    background-color: #777;
+    color: white;
+}
+
+.navbar2 .content-nav {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    height: auto;
+    text-align: left;
+    display: none;
+    top: 50px;
+    border-radius: 5px;
+}
+
+.navbar2 .content-nav::before {
+    content: "";
+    border: 8px solid white;
+    border-color: transparent transparent white transparent;
+    position: absolute;
+    top: -16px;
+    right: 26px;
+}
+
+.navbar2 .content-nav a {
+    display: block;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    line-height: 2;
+}
+
+.navbar2 .content-nav a:hover {
+    background-color: #777;
+    color: white
+}
+
+.navbar2 .content-nav a:not(:last-child) {
+    border-bottom: 1px solid #777;
+}
+
+.navbar2 .shap {
+    float: right;
+    margin: 16px;
+    z-index: 100;
+}
+
+.navbar2 .shap span {
+    height: 3px;
+    width: 30px;
+    background-color: black;
+    margin: 5px;
+    display: block;
+}
+
+.navbar2 .shap span:nth-child(even) {
+    width: 20px;
+    margin-left: 15px;
+}
+
+.navbar2 .shap:hover span:nth-child(even) {
+    width: 30px;
+    margin: 5px;
+    transition: 0.6s;
+}
+
+.navbar2 .shap:hover+.content-nav,
+.content-nav:hover {
+    display: block;
+    z-index: 100;
+}
+
+
+
+
+
+
+/*====================================
+        end navbar mobiles
+=================================*/
+
+.navbar {
+    float: left;
+    width: 100vw;
+    padding-top: 10px;
+    text-align: left;
+    position: fixed;
+    z-index: 1;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    background-color: transparent;
+    padding: 8px 16px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.navbar a i:not(:first-child)::after {
+    content: var(--before);
+    padding: 2px;
+
+}
+
+.navbar a i{
+    margin-right: 10px;
+}
+
+.navbar a.search {
+    margin-right: 20px;
+    font-size: 20px;
+}
+.navbar a:not(.search):hover {
+    background-color: var(--color-hover);
+    color: black;
+    transition: 0.4s;
+}
+
+
+.navbar a.search:hover {
+    background-color: rgba(27, 18, 18, 0.432);
+    transition: 0.4s;
+}
+
+
+
+/*===================================
+            the image header 
+===================================*/
+.header-image {
+    background-image: url("../Photo/parallax1.jpg");
+    max-width: 100%;
+    height: var(--background-height-iamge);
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    opacity: 0.75;
+    z-index: 5;
+}
+
+.header-image h2 {
+    background-color: black;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 24px;
+    font-weight: 100;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 1;
+    line-height: normal;
+}
+
+/*=====================================
+            end header 
+===================================*/
+
+/*======================================
+            start about 
+======================================*/
+
+.container {
+    padding: 64px 16px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    padding: 10px 10px 0;
+}
+
+.title h2 {
+    margin-bottom: 10px;
+}
+
+.title h2 {
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 24px;
+}
+
+.title p {
+    font-style: italic;
+    font-size: 15px;
+    margin-top: 15px;
+    max-width: 46%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.title+p {
+    line-height: 1.8;
+    /* color:var(--color-body); */
+    margin-top: 15px;
+    text-align: left;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+}
+
+.about-content {
+    margin-top: 40px;
+    display: flex;
+}
+
+.about-content .image-about {
+    padding: 30px;
+    width: 60%;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.about-content .image-about p {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.about-content .image-about p::before {
+    content: var(--before);
+    margin: 0 10px;
+    ;
+}
+
+.about-content .image-about img {
+    max-width: 100%;
+    padding: 10px;
+    opacity: 0.6;
+}
+
+.about-content .image-about img:hover {
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.about-content>p {
+    max-width: 50%;
+    padding: 20px 0;
+    text-align: justify;
+}
+
+
+.container .avg-about p {
+    margin: 10px 0;
+    letter-spacing: 10px;
+}
+
+.container .avg-about p::before {
+    content: var(--before-avg);
+}
+
+.container .avg-about input {
+    color: white;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    outline: none;
+}
+
+.container .avg-about input[value="90%"] {
+    background: linear-gradient(90deg, #616161 90%, #f1f1f1 10%);
+    padding-left: 45%;
+}
+
+.container .avg-about input[value="85%"] {
+    background: linear-gradient(90deg, #616161 85%, #f1f1f1 15%);
+    padding-left: 42.5%;
+}
+
+.container .avg-about input[value="75%"] {
+    background: linear-gradient(90deg, #616161 75%, #f1f1f1 25%);
+    padding-left: 37.5%;
+}
+
+.about .footer-about {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 150px;
+    background-color: #616161;
+    align-items: center;
+    color: #fff;
+}
+
+.about .footer-about p span {
+    font-size: 24px;
+    color: inherit;
+}
+
+.about .footer-about p {
+    color: inherit;
+    text-align: center;
+}
+
+/*===============================
+            end about 
+=============================*/
+
+/*==============================
+            start portfolio
+===============================*/
+.img-portf {
+    background-image: url(../Photo/parallax2.jpg);
+    z-index: -1;
+}
+
+.img-portf h2 {
+    background-color: transparent;
+    font-size: 40px;
+}
+
+.photo-portf {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo-portf img {
+    margin: 7px;
+    width: 23%;
+}
+
+.photo-portf img:hover {
+    opacity: 0.6;
+    transition: 0.4s;
+
+}
+
+.portf {
+    text-align: center;
+}
+
+.portf a {
+    text-transform: uppercase;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    background-color: #f1f1f1;
+    font-weight: 500;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.portf a:hover {
+    background-color: #ccc;
+    transition: 0.4s;
+}
+
+/*==============================
+            end portfolio
+===============================*/
+
+/*==============================
+            start contact
+===============================*/
+.img-con {
+    background-image: url(../Photo/parallax3.jpg);
+    z-index: -1;
+
+}
+
+.img-con h2 {
+    background-color: transparent;
+    font-size: 40px;
+}
+
+.content-contact {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow: hidden
+}
+
+.content-contact .image {
+    width: 30%;
+    height: auto;
+    float: left;
+}
+
+.content-contact .image img {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.content-contact .text-contact {
+    width: 70%;
+    float: left;
+    padding: 30px;
+
+}
+
+.content-contact .text-contact+p {
+    padding: 30px;
+    font-size: 5px;
+    font-weight: 100;
+}
+
+.content-contact p span::before {
+    content: var(--before);
+}
+
+
+.content-contact .text-contact .contact {
+    font-weight: 500;
+    color: #ccc;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.content-contact .text-contact .contact p::before,
+.content-contact .text-contact .noteToUs button::before {
+    content: var(--before);
+    padding-right: 10px;
+}
+
+
+.content-contact .text-contact .noteToUs input {
+    padding: 10px;
+    margin: 5px 0;
+    outline: none;
+    border: 1px solid #ccc;
+    width: calc(50% - 10px);
+    display: inline-block;
+}
+
+.content-contact .text-contact .noteToUs input:focus {
+    outline: 2px solid black;
+}
+
+.content-contact .text-contact .noteToUs input[name="name"] {
+    margin-right: 5px;
+}
+
+.content-contact .text-contact .noteToUs input[name="email"] {
+    float: right;
+    margin-left: 5px;
+}
+
+
+.content-contact .text-contact .noteToUs input[name="message"] {
+    width: 100%
+}
+
+
+.content-contact .text-contact .noteToUs button {
+    float: right;
+    margin-left: 5px;
+    text-transform: uppercase;
+    background: black;
+    color: white;
+    white-space: nowrap;
+    margin: 10px;
+    padding: 12px;
+    border: none;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+.content-contact .text-contact .noteToUs button:hover {
+    color: black;
+    background-color: #777;
+    transition: 0.4s;
+
+}
+
+/*===========================================
+            end contact
+===========================================*/
+
+/*===========================================
+            start footer
+===========================================*/
+.footer {
+    width: 100%;
+    height: 50%;
+    background-color: #616161;
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer:hover {
+    background-color: black;
+    transition: 0.4s;
+
+}
+
+
+
+
+.footer .container-footer > a {
+    cursor: pointer;
+    background-color: #ccc;
+    padding: 14px;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 17px;
+}
+
+.footer:hover .container-footer > a {
+    color: black;
+}
+
+
+
+
+.footer .container-footer .nav-social {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer .container-footer .nav-social i {
+    padding: 10px;
+    color: white;
+}
+
+.footer .container-footer p,
+.footer .container-footer p a {
+    color: white;
+    padding-top: 10px;
+    letter-spacing: -1px;
+    font-weight: 100;
+}
+
+/*===========================================
+            end footer
+===========================================*/

@@ -1,0 +1,95 @@
+@media(max-width:1000px) {
+    .title p {
+        max-width: 60%;
+    }
+
+    .about .about-content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .about .about-content .image-about,
+    .about-content>p {
+        max-width: 90%;
+        text-align: unset;
+    }
+}
+
+@media (max-width:955.90px) {
+    .portf .container .container .photo-portf {
+        justify-content: space-evenly;
+    }
+
+    .portf .container .container .photo-portf img {
+        width: 27%;
+        margin: 15px;
+    }
+}
+
+@media(max-width:900px) {
+
+    .content-contact .image,
+    .content-contact .text-contact {
+        float: none;
+        width: 100%;
+    }
+
+    .content-contact .image {
+        width: 80%;
+        padding: 30px;
+    }
+}
+
+
+@media(max-width:731px) {
+    .title p {
+        max-width: 80%;
+    }
+}
+
+@media (max-width:676px) {
+    .header-image .header-h2 {
+        font-size: 20px;
+    }
+
+    .portf .container .container .photo-portf img {
+        width: 42%;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width:555px) {
+    .title p {
+        max-width: 100%;
+    }
+
+    .header-image .navbar {
+        display: none;
+    }
+
+    .navbar2 {
+        display: block;
+    }
+
+    .header-image .header-h2 {
+        font-size: 14px;
+    }
+
+    .portf .container .container .photo-portf img {
+        width: 70%;
+        margin-bottom: 15px;
+    }
+}
+
+@media(max-width:421px) {
+    .header-image .header-h2 {
+        font-size: 14px;
+        padding: 5px 5px;
+
+    }
+
+    .portf .container .container .photo-portf img {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+}
